@@ -21,10 +21,17 @@ const WeekdayTitle = styled.div`
   border-right: solid 3px lightgrey;
 `
 
+const WeekendTitle = styled(WeekdayTitle)`
+  background-color: lightgrey;
+`
+
 function Section(props) {
   return (
     <StyledSection>
-            <WeekdayTitle>{props.text}</WeekdayTitle>
+        {
+            props.text === 'S' ? <WeekendTitle>{props.text}</WeekendTitle> : <WeekdayTitle>{props.text}</WeekdayTitle>
+        }
+            
     </StyledSection>
   )
 }
