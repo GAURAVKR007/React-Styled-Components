@@ -1,10 +1,20 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 import Button from './Button'
 import Icon from './Icon'
 
+const fadeIn = keyframes`
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+}
+`
+
 const Title = styled.h1`
     color: #aaecf0;
+    animation: 5s ${fadeIn} ease-in-out;
 `
 
 const SubTitle = styled(Title)`

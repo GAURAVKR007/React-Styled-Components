@@ -42,15 +42,22 @@ const ProgressBar = styled.div`
 const ProgressSection = styled.div`
     width: 250px;
 `
+const TodayProgressBar = styled(ProgressBar)`
+    background-color: purple;
+`
 
 function Section(props) {
+  let today = new Date()
+  let dayOfTheWeek = today.getDay()
+  const isToday = props.day === dayOfTheWeek
+  
   return (
     <StyledSection>
         {
             props.text === 'S' ? <WeekendTitle>{props.text}</WeekendTitle> : <WeekdayTitle>{props.text}</WeekdayTitle>
         }
         <ProgressSection>
-            <ProgressBar progress={props.progress}/>
+          {isToday ? <TodayProgressBar progress={props.progress} /> : <ProgressBar progress={props.progress} />}
         </ProgressSection>
         
     </StyledSection>
