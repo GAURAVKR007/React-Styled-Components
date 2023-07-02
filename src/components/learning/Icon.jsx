@@ -7,12 +7,17 @@ const StyledIcon = styled.div`
     height: 30px;
     border-radius: 15px;
     margin: 5px;
+    margin-left: ${({status})=> {
+        if (status === 'in-progress') return '70px';
+        else if (status === 'complete') return '100px';
+        else return '5px';
+    }};
 `
 
 const Icon = (props) => {
-    const { primary } = props;
+    const { primary, status } = props;
     return (
-        <StyledIcon primary={primary}/>
+        <StyledIcon primary={primary} status={status}/>
     )
 }
 

@@ -34,7 +34,7 @@ const Learn1 = () => {
             <Button primary text="First Button"/>
             <Button text="Second Button"/>
             <Icon primary/>
-            <Icon />
+            <Icon status="complete"/>
             <ParagraphTitle>I am a paragraph</ParagraphTitle>
         </Section>
         </>
