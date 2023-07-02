@@ -20,6 +20,9 @@ const Section = styled.div`
     border-radius: 15px;
 `
 
+const ParagraphTitle = styled(SubTitle)`
+    color: grey;
+`
 
 const Learn1 = () => {
     return (
@@ -32,6 +35,7 @@ const Learn1 = () => {
             <Button text="Second Button"/>
             <Icon primary/>
             <Icon />
+            <ParagraphTitle>I am a paragraph</ParagraphTitle>
         </Section>
         </>
     )
