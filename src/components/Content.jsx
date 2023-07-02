@@ -11,13 +11,13 @@ const Content = () => {
         <>
         <Title>Progress Tracker</Title>
         <div>
-         <Section text="M"/>
-         <Section text="T"/>
-         <Section text="W"/>
-         <Section text="T"/>
-         <Section text="F"/>
-         <Section text="S"/>
-         <Section text="S"/>
+         <Section text="M" progress="100%"/>
+         <Section text="T" progress="80%"/>
+         <Section text="W" progress="60%"/>
+         <Section text="T" progress="57%"/>
+         <Section text="F" progress="99%"/>
+         <Section text="S" progress="87%"/>
+         <Section text="S" progress="97%"/>
         </div>
       </>
     )

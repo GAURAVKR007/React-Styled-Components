@@ -24,6 +24,14 @@ const WeekdayTitle = styled.div`
 const WeekendTitle = styled(WeekdayTitle)`
   background-color: lightgrey;
 `
+const ProgressBar = styled.div`
+    background-color: red;
+    height: 50px;
+    width: ${({progress})=> progress};
+`
+const ProgressSection = styled.div`
+    width: 250px;
+`
 
 function Section(props) {
   return (
@@ -31,7 +39,10 @@ function Section(props) {
         {
             props.text === 'S' ? <WeekendTitle>{props.text}</WeekendTitle> : <WeekdayTitle>{props.text}</WeekdayTitle>
         }
-            
+        <ProgressSection>
+            <ProgressBar progress={props.progress}/>
+        </ProgressSection>
+        
     </StyledSection>
   )
 }
