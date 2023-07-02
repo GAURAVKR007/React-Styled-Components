@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import Button from './Button'
+import Icon from './Icon'
 
 const Title = styled.h1`
     color: #aaecf0;
@@ -22,6 +23,8 @@ const Learn1 = () => {
             <Title>💅🏻 Section</Title>
             <Button primary text="First Button"/>
             <Button text="Second Button"/>
+            <Icon primary/>
+            <Icon />
         </Section>
         </>
     )
